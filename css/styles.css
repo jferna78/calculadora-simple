@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.calculadora {
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+}
+
+.pantalla {
+    grid-column: 1 / -1;
+    background-color: #444;
+    color: white;
+    font-size: 2.5em;
+    padding: 10px;
+    text-align: right;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.botones button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.botones button:hover {
+    background-color: #777;
+}
+
+.botones .button-c {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #f0ad4e;
+}
+.botones .button-divide {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    background-color: #0275d8;
+}
+
+.botones .button-7 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.botones .button-8 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.botones .button-9 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.botones .button-multiply {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    background-color: #0275d8;
+}
+
+.botones .button-4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.botones .button-5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.botones .button-6 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.botones .button-subtract {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    background-color: #0275d8;
+}
+
+.botones .button-1 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+.botones .button-2 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+.botones .button-3 {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+.botones .button-add {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    background-color: #0275d8;
+}
+
+.botones .button-0 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / 6;
+}
+.botones .button-dot-decimal {
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+}
+.botones .button-equals {
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;
+    background-color: #5cb85c;
+}
+
+.botones .button-c:hover {
+    background-color: #ec971f;
+}
+.botones .button-divide:hover,
+.botones .button-multiply:hover,
+.botones .button-subtract:hover,
+.botones .button-add:hover {
+    background-color: #025aa5;
+}
+.botones .button-equals:hover {
+    background-color: #449d44;
+}

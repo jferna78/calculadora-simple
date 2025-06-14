@@ -62,6 +62,13 @@ header {
     grid-row: 1 / 2;
     background-color: #f0ad4e;
 }
+
+.botones .button-square-root {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background-color: #0275d8;
+}
+
 .botones .button-divide {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
@@ -139,6 +146,7 @@ header {
 .botones .button-c:hover {
     background-color: #ec971f;
 }
+.botones .button-square-root:hover,
 .botones .button-divide:hover,
 .botones .button-multiply:hover,
 .botones .button-subtract:hover,

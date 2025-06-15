@@ -16,6 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            if (buttonValue === '√') {
+                try {
+                    let numberToSquareRoot = parseFloat(currentExpression);
+                    if (!isNaN(numberToSquareRoot) && numberToSquareRoot >= 0) {
+                        let result = Math.sqrt(numberToSquareRoot);
+                        if (typeof result === 'number' && !isNaN(result)) {
+                            result = parseFloat(result.toFixed(6));
+                        }
+                        display.textContent = result;
+                        currentExpression = result.toString();
+                        justEvaluated = true;
+                    } else {
+                        display.textContent = 'Error!';
+                        currentExpression = '';
+                        justEvaluated = false;
+                    }
+                } catch (e) {
+                    display.textContent = 'Error!';
+                    currentExpression = '';
+                    justEvaluated = false;
+                }
+                return;
+            }
+
             if (buttonValue === '=') {
                 try {
                     let expressionToEvaluate = currentExpression.replace(/x/g, '*').replace(/÷/g, '/');
